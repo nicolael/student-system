@@ -1,0 +1,5 @@
+no/uio/inf5750/assignment2/model/Course.class
+no/uio/inf5750/assignment2/model/Student.class
+no/uio/inf5750/assignment2/dao/CourseDAO.class
+no/uio/inf5750/assignment2/dao/StudentDAO.class
+no/uio/inf5750/assignment2/service/StudentSystem.class

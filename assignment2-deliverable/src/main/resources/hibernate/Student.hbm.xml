@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping">
+<hibernate-mapping>
+	<class name="no.uio.inf5750.assignment2.model.Student" table="students">
+		<id name="id" type="int" column="student_id">
+			<generator class="native" />
+		</id>
+		<property name="name" not-null="true"/>
+		 
+		<property name="longitude" not-null="true"/>
+		<property name="latitude" not-null="true"/>
+		
+		<set name="courses" table="courses_students" inverse="true">
+			<key column="student_id"/>
+			 <many-to-many entity-name="no.uio.inf5750.assignment2.model.Course">
+                <column name="course_id" not-null="true" />
+            </many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
+
+<!-- 
+<hibernate-mapping>
+	<class name="no.uio.inf5750.assignment2.model.Course" table="courses">
+		<id name="id" type="int" column="course_id">
+			<generator class="native" />
+		</id>
+		<property name="name" not-null="true"/>
+		<set name="attendants" table="courses_students">
+ 			<key column="course_id" not-null="true" />
+            <many-to-many entity-name="no.uio.inf5750.assignment2.model.Student">
+                <column name="student_id" not-null="true" />
+            </many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
+ -->

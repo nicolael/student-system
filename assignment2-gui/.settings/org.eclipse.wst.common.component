@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="assignment2-gui">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="assignment2-api-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/assignment2-api/assignment2-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="assignment2-deliverable-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/assignment2-deliverable/assignment2-deliverable">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="assignment2-gui"/>
+        <property name="java-output-path" value="/assignment2-gui/target/classes"/>
+    </wb-module>
+</project-modules>
