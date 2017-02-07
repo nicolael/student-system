@@ -7,8 +7,8 @@
 
 3) Go to ~/assignment2-gui
 
-4) run mvn jetty:run
+4) run '$ mvn jetty:run'
 
-5) Go to chrome and fire up localhost:8080 in the adress bar
+5) Go to your web-browser and fire up localhost:8080 in the adress bar
 
 6) Voila you should now see the studentsystem -> press init databse to see some test data
