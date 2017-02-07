@@ -11,4 +11,4 @@
 
 5) Go to your web-browser and fire up localhost:8080 in the adress bar
 
-6) Voila you should now see the studentsystem -> press init databse to see some test data
+6) Voila you should now see the studentsystem -> press init database to see some test data
