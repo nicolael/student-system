@@ -3,7 +3,7 @@
 
 1) Make sure you are in the root folder ~/assignment2-skeleton-v.2/
 
-2) run '$ mvn clean install' in terminal, to build the application
+2) run '$ mvn clean install' in terminal to build the application
 
 3) Go to ~/assignment2-gui
 
