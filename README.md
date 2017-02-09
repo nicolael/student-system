@@ -13,4 +13,4 @@
 
 6) Voila you should now see the studentsystem -> press init database to see some test data
 #
-![ScreenShot](student-system/Screenshot.png)
+![ScreenShot](Screenshot.png)
