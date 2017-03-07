@@ -15,11 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * @author Lars Kristian Roland Design note: In this case all the controller
- *         logic is placed into one large class. In most cases, it makes sense
- *         to structure the logic in different classes.
- */
 
 @Controller
 public class BaseController {
@@ -58,6 +53,8 @@ public class BaseController {
 			studentSystem.addAttendantToCourse(inf5750, jane);
 			studentSystem.addAttendantToCourse(inf5761, john);
 			studentSystem.addAttendantToCourse(inf5761, jane);
+			
+			studentSystem.setStudentLocation(jane, "59.9138688", "10.752245399999993");
 
 
 			model.addAttribute("message", "Filled in data OK");
@@ -70,18 +67,21 @@ public class BaseController {
 
 	}
 
+	/*All methods return string "student" which means, return back to page 'http://localhost:8080/student' */
+	
 	@RequestMapping(value = "/student", method = RequestMethod.GET)
 	public String listStudents(ModelMap model) {
 		populateModel(model);
 		return "student";
 	}
 
+	/*http://localhost:8080/student/new?name='test'*/
 	@RequestMapping(value = "/student/new", method = RequestMethod.POST)
 	public String createStudent(ModelMap model,
 			@RequestParam("name") String name) {
 
 		studentSystem.addStudent(name);
-		populateModel(model);
+		populateModel(model); //oppdaterer modellen
 		return "student";
 	}
 
@@ -93,14 +93,27 @@ public class BaseController {
 		populateModel(model);
 		return "student";
 	}
-
+	
+	@RequestMapping(value = "/student/edit", method = RequestMethod.GET)
+	public String editStudent(ModelMap model,
+			@RequestParam("name") String name, 
+			@RequestParam("editedName") String editedName) {
+		
+		if(studentSystem.getStudentByName(name)!=null){
+			int id = studentSystem.getStudentByName(name).getId();
+			studentSystem.updateStudent(id, editedName);
+		}
+		populateModel(model);
+		return "student";
+	}
+	
 	@RequestMapping(value = "/student/{studentId}/enrollcourse", method = RequestMethod.POST)
 	public String enrollCourse(ModelMap model,
 			@PathVariable("studentId") int studentId,
 			@RequestParam("courseid") int courseId) {
-
-		logger.debug("Enrolling student " + studentId + " in course "
-				+ courseId);
+		
+		logger.debug("Enrolling student " + studentId + " in course "+ courseId);
+		
 		studentSystem.addAttendantToCourse(courseId, studentId);
 		populateModel(model);
 		return "student";
@@ -143,13 +156,12 @@ public class BaseController {
 		populateModel(model);
 		return "course";
 	}
-
+	/*oppdaterer modellen og view*/
 	private ModelMap populateModel(ModelMap model) {
 		Collection<Student> students = studentSystem.getAllStudents();
 		model.addAttribute("students", students);
 		Collection<Course> courses = studentSystem.getAllCourses();
 		model.addAttribute("courses", courses);
-	
 		return model;
 	}
 

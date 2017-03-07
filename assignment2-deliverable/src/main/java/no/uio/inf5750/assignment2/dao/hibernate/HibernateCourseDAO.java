@@ -11,6 +11,7 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+//Provides basic operations on the database
 @Transactional
 public class HibernateCourseDAO implements CourseDAO{
 
@@ -23,23 +24,19 @@ public class HibernateCourseDAO implements CourseDAO{
     {
         this.sessionFactory = sessionFactory;
     }
-
     
     @Transactional
 	public int saveCourse(Course course) {
-		
-    	/*I had to add this line in order to update items, every time we call updateCourse*/
-    	//sessionFactory.getCurrentSession().saveOrUpdate(course);
-    	
-    	if(course!=null){
+		    	
+    	if(getCourseByCourseCode(course.getCourseCode() ) == null  ){
     		
     		int value = (Integer)this.sessionFactory.getCurrentSession().save( course );
-    		//System.out.println("course with coursecode : "+course.getName()+", coursename : "+course.getName()+" was succesfully saved");
-    		//getAllCourses();
+    		
     		return value;
     	}
     	return 0;
 	}
+    
     @Transactional
 	public Course getCourse(int id) {
 		
@@ -50,7 +47,6 @@ public class HibernateCourseDAO implements CourseDAO{
 	@SuppressWarnings("deprecation")
 	@Transactional
 	public Course getCourseByCourseCode(String courseCode) {
-		
 		
 		return (Course) sessionFactory.getCurrentSession().createCriteria(Course.class).
 				add(Restrictions.eq("courseCode",courseCode)).uniqueResult();
@@ -69,11 +65,6 @@ public class HibernateCourseDAO implements CourseDAO{
 	@Transactional
 	public Collection<Course> getAllCourses() {
 		ArrayList<Course>courses=(ArrayList<Course>)sessionFactory.getCurrentSession().createCriteria(Course.class).list();
-		/*
-		for(Course c:courses){
-			System.out.println("\n\nCode : "+c.getCourseCode()+" name : "+c.getName()+" id: "+c.getId()+"\n\n");
-		}
-		*/
 		return courses;
 	}
 

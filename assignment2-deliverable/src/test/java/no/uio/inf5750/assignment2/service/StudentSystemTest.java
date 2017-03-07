@@ -104,7 +104,7 @@ public class StudentSystemTest {
 	public void testAddAttendantToCourse(){
 		int courseId = studentSystem.addCourse("INF2220", "AlgDat");
 		course = studentSystem.getCourse(courseId);
-		studentSystem.addStudent("Nicolas Lopez");
+		//studentSystem.addStudent("Nicolas Lopez");
 		int stud1_id = studentSystem.addStudent("Monica Hjertmoen");
 		int stud2_id = studentSystem.addStudent("Nicolas Lopez");
 		Student monica = studentSystem.getStudent(stud1_id);

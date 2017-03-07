@@ -20,20 +20,3 @@
 		</set>
 	</class>
 </hibernate-mapping>
-
-<!-- 
-<hibernate-mapping>
-	<class name="no.uio.inf5750.assignment2.model.Course" table="courses">
-		<id name="id" type="int" column="course_id">
-			<generator class="native" />
-		</id>
-		<property name="name" not-null="true"/>
-		<set name="attendants" table="courses_students">
- 			<key column="course_id" not-null="true" />
-            <many-to-many entity-name="no.uio.inf5750.assignment2.model.Student">
-                <column name="student_id" not-null="true" />
-            </many-to-many>
-		</set>
-	</class>
-</hibernate-mapping>
- -->

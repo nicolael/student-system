@@ -1,5 +1,4 @@
 package no.uio.inf5750.assignment2.service.impl;
-//import java.util.ArrayList;
 
 import java.util.Collection;
 import java.util.Set;
@@ -38,13 +37,12 @@ public class DefaultStudentSystem implements StudentSystem{
 	@Override
 	public void updateCourse(int courseId, String courseCode, String name) {
 	
-		Course course = courseDao.getCourse(courseId);
+		Course course = courseDao.getCourse(courseId);//Gets course from database
 		
 		if(course!=null){
 			course.setCourseCode(courseCode);
 			course.setName(name);
 			//System.out.println("\nUpdated to : "+course.getName()+" with courseCode : "+course.getCourseCode()+"\n");
-			//courseDao.saveCourse(course); /*This lines updates the object in the current session*/
 			return;
 		}
 		System.out.println("Course not updated!!");
@@ -95,6 +93,7 @@ public class DefaultStudentSystem implements StudentSystem{
 
 	@Override
 	public void addAttendantToCourse(int courseId, int studentId) {
+		
 		Course course = getCourse(courseId);
 		Student stud = getStudent(studentId);
 		if(course!=null&&stud!=null){
@@ -121,6 +120,7 @@ public class DefaultStudentSystem implements StudentSystem{
 
 	@Override
 	public int addStudent(String name) {
+		
 		Student student = new Student(name);
 		return studentDao.saveStudent(student);	
 	}
@@ -137,7 +137,7 @@ public class DefaultStudentSystem implements StudentSystem{
 
 	@Override
 	public Student getStudent(int studentId) {
-		return studentDao.getStudent(studentId);
+		return studentDao.getStudent(studentId); /*returns student object from database*/
 	}
 
 	@Override
@@ -154,12 +154,12 @@ public class DefaultStudentSystem implements StudentSystem{
 	@Override
 	public void delStudent(int studentId) {
 		Student stud = getStudent(studentId);
-		int studId= stud.getId();
+		//int studId= stud.getId();
 		if(!stud.getCourses().isEmpty()){
 			Set<Course> courses= stud.getCourses();
 			for(Course c : courses){
 				int courseCode = c.getId();
-				removeAttendantFromCourse(courseCode,studId);
+				removeAttendantFromCourse(courseCode,studentId);
 			}
 		}
 		if(stud!=null){

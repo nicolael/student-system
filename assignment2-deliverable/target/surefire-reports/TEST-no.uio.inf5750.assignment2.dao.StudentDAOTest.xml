@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="no.uio.inf5750.assignment2.dao.StudentDAOTest" time="0.039" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="no.uio.inf5750.assignment2.dao.StudentDAOTest" time="0.052" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.2"/>
+    <property name="os.version" value="10.12.3"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/Nicolas"/>
     <property name="user.timezone" value="Europe/Oslo"/>
@@ -62,9 +62,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testDelStudent" time="0.007"/>
-  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testSaveStudent" time="0.007"/>
-  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetStudent" time="0.008"/>
-  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetAllStudents" time="0.007"/>
-  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetStudentByName" time="0.01"/>
+  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testDelStudent" time="0.012"/>
+  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testSaveStudent" time="0.01"/>
+  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetStudent" time="0.009"/>
+  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetAllStudents" time="0.009"/>
+  <testcase classname="no.uio.inf5750.assignment2.dao.StudentDAOTest" name="testGetStudentByName" time="0.012"/>
 </testsuite>

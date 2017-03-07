@@ -60,14 +60,23 @@
 			<tr>
 				<th>Code</th>
 				<th>Name</th>
-				<th>Delete</th>
+				<th>Students</th>
+				<th>Delete course</th>
 			</tr>
-			<c:forEach items="${courses}" var="c">
+			<c:forEach items="${courses}" var="s">
 				<tr>
-					<td>${c.courseCode}</td>
-					<td>${c.name}</td>
+					<td>${s.courseCode}</td>
+					<td>${s.name}</td>
+					<td>
+					<c:forEach items="${s.attendants}" var="sc">
+					<ul>
+					<li>${sc.name}</li>
+					</ul>
+                            <!--  <option value="${sc.name}">${sc.name}</option> -->
+						</c:forEach></td>
+					</td>
 					<td><a
-						href="${pageContext.request.contextPath}/course/${c.id}/delete">Delete</a></td>
+						href="${pageContext.request.contextPath}/course/${s.id}/delete">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

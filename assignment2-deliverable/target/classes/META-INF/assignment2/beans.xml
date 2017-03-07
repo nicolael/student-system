@@ -32,9 +32,10 @@
     <property name="hibernateProperties">
           <props>
                 <!-- Postgres -->
+            <prop key="hibernate.show_sql">true</prop>
             <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
             <!-- <prop key="hibernate.show_sql">true</prop>  -->
-            <prop key="hibernate.hbm2ddl.auto">create</prop>
+            <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
           </props>
     </property>
   </bean>
@@ -45,9 +46,9 @@
     <property name="driverClass" value="org.postgresql.Driver" />
     <property name="user" value="dhis" />
     <property name="password" value="dhis" />
-               
+           
   </bean> 
-   
+  <!-- We use annotations based configuration to wire our components-->
     <bean id="courseDAO" class="no.uio.inf5750.assignment2.dao.hibernate.HibernateCourseDAO"/>
     <bean id="studentDAO" class="no.uio.inf5750.assignment2.dao.hibernate.HibernateStudentDAO"/>
     <bean id="studentSystem" class="no.uio.inf5750.assignment2.service.impl.DefaultStudentSystem"/>

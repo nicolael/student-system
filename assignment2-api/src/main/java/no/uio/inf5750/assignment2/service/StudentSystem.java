@@ -5,10 +5,6 @@ import java.util.Collection;
 import no.uio.inf5750.assignment2.model.Course;
 import no.uio.inf5750.assignment2.model.Student;
 
-/**
- * @author Torgeir Lorange Ostby
- * @version $Id: StudentSystem.java 28 2007-08-23 11:06:31Z torgeilo $
- */
 public interface StudentSystem {
 
     /**

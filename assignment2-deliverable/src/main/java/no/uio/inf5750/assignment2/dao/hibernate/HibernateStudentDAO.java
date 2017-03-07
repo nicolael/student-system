@@ -35,6 +35,7 @@ public class HibernateStudentDAO implements StudentDAO {
     @Transactional
 	public int saveStudent(Student student) {
 		
+    	if(getStudentByName(student.getName())!=null) return 0;
 		return (Integer) sessionFactory.getCurrentSession().save( student );
 		
 	}

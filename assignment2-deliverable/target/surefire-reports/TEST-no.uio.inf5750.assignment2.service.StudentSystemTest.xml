@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="16" failures="0" name="no.uio.inf5750.assignment2.service.StudentSystemTest" time="0.114" errors="0" skipped="0">
+<testsuite tests="16" failures="0" name="no.uio.inf5750.assignment2.service.StudentSystemTest" time="0.221" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.2"/>
+    <property name="os.version" value="10.12.3"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/Nicolas"/>
     <property name="user.timezone" value="Europe/Oslo"/>
@@ -62,20 +62,20 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testDelStudent" time="0.004"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddAttendantToCourse" time="0.008"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetStudent" time="0.004"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testUpdateStudent" time="0.004"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testgetCourseByName" time="0.009"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddStudent" time="0.003"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testDelCourse" time="0.003"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testRemoveAttendantFromCourse" time="0.005"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testUpdateCourse" time="0.005"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetAllCourses" time="0.008"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="TestSetStudentLocation" time="0.012"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddCourse" time="0.006"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetStudentByName" time="0.012"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testDelStudent" time="0.009"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddAttendantToCourse" time="0.022"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetStudent" time="0.007"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testUpdateStudent" time="0.006"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testgetCourseByName" time="0.024"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddStudent" time="0.008"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testDelCourse" time="0.006"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testRemoveAttendantFromCourse" time="0.025"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testUpdateCourse" time="0.01"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetAllCourses" time="0.015"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="TestSetStudentLocation" time="0.014"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testAddCourse" time="0.011"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetStudentByName" time="0.017"/>
   <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetCourseByCourseCode" time="0.016"/>
   <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testGetCourse" time="0.006"/>
-  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testgetAllStudents" time="0.009"/>
+  <testcase classname="no.uio.inf5750.assignment2.service.StudentSystemTest" name="testgetAllStudents" time="0.025"/>
 </testsuite>

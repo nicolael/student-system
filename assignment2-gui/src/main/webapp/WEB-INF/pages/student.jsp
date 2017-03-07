@@ -14,11 +14,6 @@
 <link href="${pageContext.request.contextPath}/css/bootstrap.css"
 	rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-      <script src="${pageContext.request.contextPath}/js/html5shiv.js"></script>
-      <script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 
@@ -85,8 +80,11 @@
 								<c:forEach items="${courses}" var="c">
 									<option value="${c.id}">${c.courseCode}</option>
 								</c:forEach>
-							</select> <input type="submit" class="btn btn-default"
+							</select>
+							
+							 <input type="submit" class="btn btn-default"
 								value="Enroll course">
+								
 						</form>
 					</td>
 					
@@ -98,9 +96,8 @@
 		</table>
 
 	</div>
-
 	<div class="container">
-
+		<!--Sends the form-data as an HTTP post transaction-->
 		<h2>Create student:</h2>
 		<form name="input"
 			action="${pageContext.request.contextPath}/student/new" method="post">
@@ -110,14 +107,48 @@
 					<td><input class="form-control" type="text" name="name"
 						placeholder="Enter student name" autofocus /></td>
 				</tr>
+				
+				<tr>
+				<td>Email:</td>
+					<td><input class="form-control" type="text" name="email"
+						placeholder="Enter student email" autofocus /></td>
+				</tr>		
+
+				<tr>
+				<td>Phone number:</td>
+					<td><input class="form-control" type="text" name="phone"
+						placeholder="Enter Phone number" autofocus /></td>
+				</tr>
+	
 				<tr>
 					<td></td>
 					<td><input class="btn btn-primary" type="submit" value="Save"></td>
 				</tr>
 			</table>
 		</form>
+		<h2>Edit student:</h2>		
+		<form name="edit"
+					action="${pageContext.request.contextPath}/student/edit" method="get">
+					<table class="table">
+						<tr>
+							<td>Name : </td>
+							<td><input class="form-control" type="text" name="name"
+								placeholder="Enter student name" autofocus /></td>
+						</tr>
+						
+						<tr>
+							<td>Edit name : </td>
+							<td><input class="form-control" type="text" name="editedName"
+								placeholder="Enter new name" autofocus /></td>
+						</tr>
+									
+						<tr>
+							<td></td>
+							<td><input class="btn btn-primary" type="submit" value="Edit"></td>
+						</tr>
+					</table>
+				</form>
 	</div>
-
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -125,5 +156,7 @@
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+	
+
 </body>
 </html>

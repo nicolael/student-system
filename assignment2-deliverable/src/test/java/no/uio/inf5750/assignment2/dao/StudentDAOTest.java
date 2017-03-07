@@ -48,7 +48,7 @@ public class StudentDAOTest {
 	public void testGetStudentByName(){
 		studentDao.saveStudent(student);
 		String studName = student.getName();
-		student = null;
+		student = null; //nullstiller objektet
 		student = studentDao.getStudentByName(studName);
 		assertNotNull(student);
 		assertEquals(studName,student.getName());
