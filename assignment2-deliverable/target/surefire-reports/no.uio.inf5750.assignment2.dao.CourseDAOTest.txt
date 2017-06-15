@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: no.uio.inf5750.assignment2.dao.CourseDAOTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.467 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.592 sec - in no.uio.inf5750.assignment2.dao.CourseDAOTest

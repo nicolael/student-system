@@ -41,7 +41,8 @@ Location og Google maps
 
 
 
-Grunnen til at ..
+\list or \l: list all databases
+\dt: list all tables in the current database
 
 1) psql inf5750
 2) \l or \l: lists all databases

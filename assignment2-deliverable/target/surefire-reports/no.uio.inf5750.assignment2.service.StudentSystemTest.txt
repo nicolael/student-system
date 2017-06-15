@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: no.uio.inf5750.assignment2.service.StudentSystemTest
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.292 sec
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.361 sec - in no.uio.inf5750.assignment2.service.StudentSystemTest

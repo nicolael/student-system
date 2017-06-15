@@ -11,6 +11,10 @@
 	<artifactId>assignment2-gui</artifactId>
 	<packaging>war</packaging>
 	<name>Assignment 2 GUI</name>
+	
+	<properties>
+	    <sonar.skip>true</sonar.skip>
+	</properties>
 
 	<dependencies>
 		<!-- <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
