@@ -1,0 +1,6 @@
+projectKey=no.uio.inf5750:assignment2
+serverUrl=http://localhost:9000
+serverVersion=6.4.0.25310
+dashboardUrl=http://localhost:9000/dashboard/index/no.uio.inf5750:assignment2
+ceTaskId=AVytChSRjq4U-_WfyO4_
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVytChSRjq4U-_WfyO4_
